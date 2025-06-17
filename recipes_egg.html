@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>혼밥연구소</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- 폰트 -->
+  <style>
+    @font-face {
+      font-family: 'KyoboHandwriting2023wsa';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2') format('woff2');
+    }
+
+    body {
+      font-family: 'KyoboHandwriting2023wsa', sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    /* 배경 이미지 */
+    .main-bg {
+      background-image: url('images/egg.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* 로고 이미지 크기 조절 */
+    .navbar-brand img {
+      height: 60px;
+    }
+
+    /* 상단 메뉴 항목 스타일 */
+    .custom-nav-link {
+      position: relative;
+      font-size: 1.15rem;
+      text-decoration: none !important;
+      transition: color 0.2s;
+      color: #fff;
+      padding: 0.5rem 2.5rem;
+      font-weight: 600;
+    }
+
+    /* 메뉴 하이라이트 효과 */
+    .custom-nav-link::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+      width: 50%;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+
+    .custom-nav-link:hover::after,
+    .custom-nav-link:focus::after {
+      transform: scaleX(1);
+    }
+
+    /* 재료별 레시피 영역 */
+    .recipe-banner {
+      padding-top: 30px;
+      padding-bottom: 60px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .recipe-banner h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .category-link {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    .category-link:hover {
+      color: #ffd700;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* 개별 레시피 카드 */
+    .recipe-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    width: 400px;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-right: 24px;
+    margin-left: 24px;
+    }
+
+    .recipe-box {
+    width: 100%;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #fff;
+    border-radius: 18px;
+    backdrop-filter: blur(3px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+    display: block;
+    }
+
+    .recipe-box:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.07);
+    }
+
+    .recipe-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .recipe-title {
+      margin-top: 18px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <div class="main-bg">
+
+    <!-- 네비게이션 바 -->
+<nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- 왼쪽 공간 확보 (로고 가운데 정렬용) -->
+    <div style="width: 300px;"></div>
+
+    <!-- 가운데 로고 -->
+    <a class="navbar-brand d-flex flex-column align-items-center" href="index.html">
+      <img src="images/logo.png" alt="로고" class="mb-1" style="height: 60px;">
+      <span class="fw-bold text-black" style="font-size: 1.5rem;">혼밥연구소</span>
+    </a>
+
+    <!-- 오른쪽 문구 -->
+    <div style="width: 300px;" class="d-flex justify-content-end">
+      <span class="px-3 py-1 rounded-pill bg-light border border-success text-success small shadow-sm">
+        혼밥연구소와 함께 해주셔서 감사합니다.
+      </span>
+    </div>
+
+  </div>
+</nav>
+
+
+    <!-- 중간 카테고리 메뉴바 -->
+    <div style="background-color: #2C573C; width: 100%;">
+      <div class="container px-0">
+        <ul class="nav justify-content-center mb-4 py-3" style="gap: 3rem;">
+          <li class="nav-item d-flex align-items-center">
+            <img src="images/spoon.png" alt="숟가락" style="height: 32px; margin-right: 2rem;">
+          </li>
+          <li class="nav-item"><a class="custom-nav-link" href="recipes.html">레시피</a></li>
+          <li class="nav-item"><a class="custom-nav-link" href="menu.html">주간 식단</a></li>
+          <li class="nav-item"><a class="custom-nav-link" href="kitchen.html">주방 노하우</a></li>
+          <li class="nav-item"><a class="custom-nav-link" href="share.html">한 끼 공유</a></li>
+          <li class="nav-item d-flex align-items-center">
+            <img src="images/chopstick.png" alt="젓가락" style="height: 32px; margin-left: 2rem;">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 재료별 레시피 카드 목록 -->
+    <section class="recipe-banner">
+      <div class="container">
+        <h1>재료별 레시피</h1>
+        <div class="mb-4">
+          <a href="recipes_egg.html" class="category-link" style="color: #ffd700;">계란</a> |
+          <a href="recipes_spam.html" class="category-link">스팸</a> |
+          <a href="recipes_kimchi.html" class="category-link">김치</a> |
+          <a href="recipes_dumpling.html" class="category-link">냉동만두</a>
+        </div>
+
+        <div class="d-flex justify-content-center gap-4 flex-wrap">
+          <div class="recipe-item">
+            <a href="recipe4.html" class="recipe-box"><img src="images/recipe4/4.jpg" alt="1" class="recipe-img"></a>
+            <div class="recipe-title">오므라이스</div>
+          </div>
+          <div class="recipe-item">
+            <a href="recipe10.html" class="recipe-box"><img src="images/recipe10/10.jpg" alt="2" class="recipe-img"></a>
+            <div class="recipe-title">간장계란밥</div>
+        </div>
+      </div>
+      <!-- 더 보기 버튼 (카드 목록 하단 중앙 정렬) -->
+      <div class="d-flex justify-content-center mt-4">
+      <div class="text-center">
+      <button class="btn btn-outline-success rounded-circle d-flex align-items-center justify-content-center mx-auto"
+            style="width: 60px; height: 60px; font-size: 2rem;">
+            +
+          </button>
+          <div class="mt-2" style="font-size: 1rem; color: #ffffff;">리스트 더 보기 (1/65)</div>
+        </div>
+      </div>
+</section> 
+            <!-- TOP 버튼 -->
+  <a href="#" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow" style="width: 50px; height: 50px; z-index: 999;">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </a>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

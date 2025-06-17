@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>혼밥연구소</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'KyoboHandwriting2023wsa';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2') format('woff2');
+    }
+
+    body {
+      font-family: 'KyoboHandwriting2023wsa', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tip-section {
+      background-image: url('images/background3.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 80px 0;
+    }
+
+    .tip-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: 1;
+    }
+
+    .tip-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .tip-card {
+      background-color: #eaf5ec;
+      border: 1px solid #d6e8dc;
+      border-radius: 1.5rem;
+      padding: 30px;
+      box-shadow: 0 8px 18px rgba(44, 87, 60, 0.1);
+      transition: box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .tip-card:hover {
+      box-shadow: 0 12px 24px rgba(44, 87, 60, 0.2);
+    }
+
+    .tip-icon {
+      font-size: 2rem;
+      color: #2c573c;
+      margin-right: 10px;
+    }
+
+   .pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.pagination li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff80;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #2C573C;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination li a.active,
+.pagination li a:hover {
+  background-color: #2C573C;
+  color: white;
+  transform: scale(1.1);
+}
+
+
+    .navbar-brand img {
+      height: 60px;
+    }
+
+    .custom-nav-link {
+      position: relative;
+      font-size: 1.15rem;
+      text-decoration: none !important;
+      transition: color 0.2s;
+      color: #fff;
+      padding: 0.5rem 2.5rem;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .custom-nav-link::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 25%;
+      bottom: 0;
+      width: 50%;
+      height: 2.5px;
+      background: #fff;
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
+
+    .custom-nav-link:hover::after,
+    .custom-nav-link:focus::after {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 바 -->
+<nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
+    
+    <!-- 왼쪽 공간 확보 (로고 정중앙 유지 목적) -->
+    <div style="width: 300px;"></div>
+    
+    <!-- 가운데 로고 -->
+    <a class="navbar-brand d-flex flex-column align-items-center" href="index.html">
+      <img src="images/logo.png" alt="로고" class="mb-1">
+      <span class="fw-bold text-black" style="font-size: 1.5rem;">혼밥연구소</span>
+    </a>
+
+    <!-- 오른쪽 문구 -->
+    <div style="width: 300px;" class="d-flex justify-content-end">
+      <span class="px-3 py-1 rounded-pill bg-light border border-success text-success small">
+        혼밥연구소와 함께 해주셔서 감사합니다.
+      </span>
+    </div>
+
+  </div>
+</nav>
+
+  <!-- 중간 메뉴 바 -->
+  <div style="background-color: #2C573C; width: 100%;">
+    <div class="container px-0">
+      <ul class="nav justify-content-center mb-4 py-3" style="gap: 3rem;">
+        <li class="nav-item d-flex align-items-center">
+          <img src="images/spoon.png" alt="숟가락" style="height: 32px; margin-right: 2rem;">
+        </li>
+        <li class="nav-item"><a class="custom-nav-link" href="recipes.html">레시피</a></li>
+        <li class="nav-item"><a class="custom-nav-link" href="menu.html">주간 식단</a></li>
+        <li class="nav-item"><a class="custom-nav-link" href="kitchen.html">주방 노하우</a></li>
+        <li class="nav-item"><a class="custom-nav-link" href="share.html">한 끼 공유</a></li>
+        <li class="nav-item d-flex align-items-center">
+          <img src="images/chopstick.png" alt="젓가락" style="height: 32px; margin-left: 2rem;">
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 꿀팁 카드 섹션 -->
+  <section class="tip-section">
+    <div class="tip-overlay"></div>
+    <div class="container tip-content">
+      <h2 class="text-center mb-5 fs-1 text-dark">✨ 주방 노하우 총집합</h2>
+      <div class="row g-4">
+        <!-- 카드 반복 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="tip-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-egg tip-icon"></i><h5 class="mb-0">달걀 유통기한 확인법</h5>
+            </div>
+            <p>달걀을 물에 넣었을 때 바닥에 가라앉으면 신선, 뜨면 오래 된 것!</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="tip-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-droplet tip-icon"></i><h5 class="mb-0">기름때 제거</h5>
+            </div>
+            <p>따뜻한 물 + 주방세제 + 극세사 천<br>식초+물 혼합 용액은 민감한 마감제에 사용</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="tip-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-shield-check tip-icon"></i><h5 class="mb-0">고무장갑 보관법</h5>
+            </div>
+            <p>물기 제거 후 뒤집어 말리고, 주 1회 베이킹소다물에 소독</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="tip-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-cup-hot tip-icon"></i><h5 class="mb-0">냄비 찌든 때 제거</h5>
+            </div>
+            <p>베이킹소다 + 물을 넣고 끓인 후 문질러 닦기</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="tip-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-recycle tip-icon"></i><h5 class="mb-0">커피 찌꺼기 재활용</h5>
+            </div>
+            <p>냉장고 탈취제, 하수구 냄새 제거에 활용</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="tip-card">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-exclamation-circle tip-icon"></i><h5 class="mb-0">냉동 보관 주의 식품</h5>
+            </div>
+            <p>날계란·유제품은 냉동 X<br>해동 후 재냉동은 피하기</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 페이지네이션 -->
+  <div class="pagination-container">
+    <ul class="pagination">
+      <li><a href="#">&lt;</a></li>
+      <li><a class="active" href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">&gt;</a></li>
+    </ul>
+  </div>
+
+  <!-- TOP 버튼 -->
+  <a href="#" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow" style="width: 50px; height: 50px; z-index: 999;">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

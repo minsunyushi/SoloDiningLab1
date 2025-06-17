@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- 문자 인코딩 및 반응형 웹 설정 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>혼밥연구소</title>
+  
+<link rel="icon" href="images/logo.png" type="image/png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- 외부 CSS 연결 -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- 폰트 -->
+<style>
+@font-face {
+  font-family: 'KyoboHandwriting2023wsa';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'KyoboHandwriting2023wsa', sans-serif;
+}
+</style>
+<!-- 배경 이미지 스타일 -->
+<style>
+body {
+  background: url('images/background.jpg') repeat, #f6faeb; /* 원본 사이즈로 반복 배경 */
+  background-size: auto; /* 원본 이미지 크기 유지 */
+  background-position: 0 110px; /* 배경 이미지를 아래로 110px 내림 */
+}
+</style>
+<!--첫 화면--> 
+
+    <nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container d-grid" style="grid-template-columns: 1fr auto 1fr; align-items: center;">
+
+    <!-- 왼쪽 비워두기 -->
+    <div></div>
+
+    <!-- 중앙 로고 -->
+    <a class="navbar-brand d-flex flex-column align-items-center mx-auto" href="index.html">
+      <img src="images/logo.png" alt="로고" class="mb-1" style="height: 64px; width: auto;">
+      <span class="fw-bold text-black" style="font-size: 1.5rem;">혼밥연구소</span>
+    </a>
+
+    <!-- 오른쪽 문구 -->
+    <div class="text-end">
+      <span class="px-3 py-1 rounded-pill bg-light border border-success text-success small">
+        혼밥연구소와 함께 해주셔서 감사합니다.
+      </span>
+    </div>
+
+  </div>
+</nav>
+
+<!-- 상단 메뉴 바 (배경색: 진한 녹색) -->
+<div style="background-color: #2C573C; width: 100%;">
+  <div class="container px-0">
+    <ul class="nav justify-content-center mb-4 py-3" style="gap: 3rem;">
+      <!-- 숟가락 아이콘 -->
+      <li class="nav-item d-flex align-items-center">
+        <img src="images/spoon.png" alt="숟가락" style="height: 32px; margin-right: 2rem;">
+      </li>
+
+      <!-- 레시피 드롭다운 메뉴 -->
+      <li class="nav-item dropdown-hover position-relative">
+        <a class="nav-link text-white fw-semibold fs-5 px-5" href="recipes.html">레시피</a>
+        <ul class="dropdown-menu-custom">
+          <li><a href="recipes_egg.html">계란</a></li>
+          <li><a href="recipes_spam.html">스팸</a></li>
+          <li><a href="recipes_kimchi.html">김치</a></li>
+          <li><a href="recipes_dumpling.html">냉동만두</a></li>
+        </ul>
+      </li>
+
+      <!-- 나머지 메뉴 항목 -->
+      <li class="nav-item"><a class="nav-link text-white fw-semibold fs-5 px-5" href="menu.html">주간 식단</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-semibold fs-5 px-5" href="kitchen.html">주방 노하우</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-semibold fs-5 px-5" href="share.html">한 끼 공유</a></li>
+
+      <!-- 젓가락 아이콘 -->
+      <li class="nav-item d-flex align-items-center">
+        <img src="images/chopstick.png" alt="젓가락" style="height: 32px; margin-left: 2rem;">
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 히어로 영역 (메인 소개 섹션) -->
+<section class="hero-section py-5">
+  <div class="hero-content container">
+    
+
+    <!-- 검색 박스 -->
+    <form class="d-flex search-box mb-4" style="max-width: 600px; margin: 0 auto;">
+      <input type="search" class="form-control form-control-lg fs-4" placeholder="레시피 검색" style="height: 60px; color: #000;">
+      <button type="submit" class="btn btn-success btn-lg ms-2" style="height: 60px;">
+        <i class="bi bi-search fs-3 px-3"></i>
+      </button>
+    </form>
+
+    <!-- 태그 버튼들 -->
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+      <a href="recipe10.html" class="tag-btn btn btn-outline-success btn-lg px-4 fs-5" style="color: #000; border-color: #87b197;">간장계란밥</a>
+      <a href="recipe6.html" class="tag-btn btn btn-outline-success btn-lg px-4 fs-5" style="color: #000; border-color: #87b197;">스팸마요덮밥</a>
+      <a href="recipe9.html" class="tag-btn btn btn-outline-success btn-lg px-4 fs-5" style="color: #000; border-color: #87b197;">김치볶음밥</a>
+      <a href="recipe7.html" class="tag-btn btn btn-outline-success btn-lg px-4 fs-5" style="color: #000; border-color: #87b197;">순두부그라탕</a>
+      <a href="recipe3.html" class="tag-btn btn btn-outline-success btn-lg px-4 fs-5" style="color: #000; border-color: #87b197;">방구석 오코노미야끼</a>
+      <a href="recipe4.html" class="tag-btn btn btn-outline-success btn-lg px-4 fs-5" style="color: #000; border-color: #87b197;">간단한 오므라이스</a>
+    </div>
+
+
+  </div>
+</section>
+<!-- 혼밥 추천 섹션 -->
+<section class="py-5" style="background-color: #fff;">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold" style="font-size: 2.5rem; color: #000;">🍳 오늘 뭐 먹지?</h2>
+    <p class="lead mb-5" style="color: #000;">인기 혼밥 레시피를 추천해 드릴게요!</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="recipe6.html" class="text-decoration-none text-dark">
+          <div class="card h-100 recipe-card" style="height: 520px; cursor: pointer;">
+            <img src="images/recipe6/6.jpg" class="card-img-top" alt="레시피1" style="height: 300px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">스팸 마요덮밥</h5>
+                <p class="card-text">초간단 재료로 집에서 만드는 최고의 한끼!</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="recipe9.html" class="text-decoration-none text-dark">
+          <div class="card h-100 recipe-card" style="height: 520px; cursor: pointer;">
+            <img src="images/recipe9/9.jpg" class="card-img-top" alt="레시피2" style="height: 300px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">김치 볶음밥</h5>
+                <p class="card-text">남은 김치와 밥만 있으면 OK!</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="recipe10.html" class="text-decoration-none text-dark">
+          <div class="card h-100 recipe-card" style="height: 520px; cursor: pointer;">
+            <img src="images/recipe10/10.jpg" class="card-img-top" alt="레시피3" style="height: 300px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">간장 계란밥</h5>
+                <p class="card-text">초스피드! 계란 하나면 해결되는 든든한 한끼</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ 혼밥 추천 섹션 2 -->
+<section class="py-5" style="background-color: #f6faeb;">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold" style="font-size: 2.5rem; color: #000;">🧑‍🍳 오늘은 이런 레시피 어때요?</h2>
+    <p class="lead mb-5" style="color: #000;">특별한 날, 혼자라도 근사하게 즐기는 요리들!</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <a href="recipe7.html" class="text-decoration-none text-dark">
+          <div class="card h-100 recipe-card" style="height: 520px; cursor: pointer;">
+            <img src="images/recipe7/7.jpg" class="card-img-top" alt="순두부그라탕" style="height: 300px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">순두부 그라탕</h5>
+                <p class="card-text">부드러운 순두부로 만드는 특별한 오븐 요리!</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="recipe3.html" class="text-decoration-none text-dark">
+          <div class="card h-100 recipe-card" style="height: 520px; cursor: pointer;">
+            <img src="images/recipe3/3.jpg" class="card-img-top" alt="오코노미야끼" style="height: 300px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">방구석 오코노미야끼</h5>
+                <p class="card-text">냉장고 속 채소와 계란으로 완성하는 일식 감성!</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="recipe4.html" class="text-decoration-none text-dark">
+          <div class="card h-100 recipe-card" style="height: 520px; cursor: pointer;">
+            <img src="images/recipe4/4.jpg" class="card-img-top" alt="오므라이스" style="height: 300px; object-fit: cover;">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 class="card-title">간단한 오므라이스</h5>
+                <p class="card-text">남은 밥과 케찹으로 만드는 초간단 요리!</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Footer -->
+<footer class="bg-light text-muted py-4 mt-5 border-top">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <div class="col-md-9">
+        <div class="mb-2">
+          <a href="#" class="me-3 text-dark text-decoration-none">공지사항</a>
+          <a href="#" class="me-3 text-dark text-decoration-none">상담접수</a>
+          <a href="#" class="me-3 text-dark text-decoration-none">이메일주소무단수집거부</a>
+          <a href="#" class="me-3 text-dark text-decoration-none">이용약관</a>
+          <a href="#" class="text-danger text-decoration-none">개인정보처리방침</a>
+        </div>
+        <div class="small text-secondary">
+          <strong>(주)혼밥연구소</strong> │ 서울특별시 노원구 화랑로 621 │ 사업자등록번호 123-45-67890 │ 대표이사 김민선 <br>
+          대표전화 010-7129-5820 │ 고객센터 02-1234-5678<br>
+          ⓒ 레시피 저작권은 모두 유튜브 자취요리신에 있음을 알려드립니다.
+        </div>
+      </div>
+      <div class="col-md-3 text-center text-md-end mt-3 mt-md-0">
+        <div class="mb-2">
+          <select class="form-select w-auto d-inline-block">
+            <option selected>패밀리 사이트</option>
+            <option>혼술연구소</option>
+            <option>자취연구소</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-center justify-content-md-end gap-2">
+          <i class="bi bi-facebook fs-4"></i>
+          <i class="bi bi-instagram fs-4"></i>
+          <i class="bi bi-youtube fs-4"></i>
+          <i class="bi bi-chat-dots fs-4"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ✅ 맨 위로 버튼 -->
+<a href="#" class="top-btn btn btn-success rounded-circle position-fixed" style="bottom: 20px; right: 20px; width: 50px; height: 50px; z-index: 999;">
+  <i class="bi bi-chevron-up fs-4 text-white d-flex justify-content-center align-items-center" style="height: 100%;"></i>
+</a>
+
+
+
+<!-- ✅ Bootstrap JavaScript Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

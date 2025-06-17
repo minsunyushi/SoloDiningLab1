@@ -1,0 +1,256 @@
+/* 전체 기본 설정 */
+body {
+  font-family: 'KyoboHandwriting2023wsa', sans-serif;
+  background-color: #f6faeb; /* 💡 전체 배경색 */
+}
+
+/* 로고 이미지 크기 조절 */
+.logo {
+  height: 40px;
+}
+
+/* Hero 섹션 배경 */
+.hero-section {
+  position: relative;
+  background: url('images/hero-bg.jpg') center/cover no-repeat; /* 💡 메인 배경 이미지 */
+  min-height: 600px;
+  color: white;
+}
+
+/* Hero 섹션 오버레이: 어두운 반투명 레이어 */
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 87, 60, 0.7); /* 진한 녹색 투명도 조절 */
+  z-index: 0;
+}
+
+/* Hero 섹션 내부 컨텐츠 스타일 */
+.hero-content {
+  position: relative;
+  z-index: 1; /* 오버레이 위에 표시되도록 */
+  text-align: center;
+  padding-top: 100px;
+}
+
+/* 검색 박스 스타일 */
+.search-box {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  background: white;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.search-box input {
+  border: none;
+  padding: 0.75rem 1rem;
+  width: 100%;
+}
+.search-box button {
+  background: none;
+  border: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* 태그 버튼 스타일 */
+.tag-btn {
+  margin: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 내비게이션 메뉴 항목 스타일 */
+.nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s;
+}
+
+/* 내비게이션 호버 밑줄 효과 */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* 드롭다운 호버 메뉴 스타일 */
+.dropdown-hover {
+  position: relative;
+}
+
+/* 드롭다운 메뉴 박스 스타일 */
+.dropdown-menu-custom {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  min-width: 200px;
+  padding: 1rem 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  text-align: center;
+}
+
+/* 드롭다운 항목 스타일 */
+.dropdown-menu-custom li {
+  list-style: none;
+}
+.dropdown-menu-custom a {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.dropdown-menu-custom a:hover {
+  background-color: #f2f2f2;
+  color: #2C573C;
+}
+
+/* 드롭다운 메뉴 표시 조건 */
+.dropdown-hover:hover .dropdown-menu-custom {
+  display: block;
+}
+
+
+/* 카드 hover시 그림자 효과 CSS */
+.recipe-card {
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 8px 0 rgba(44, 87, 60, 0.08);
+}
+.recipe-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(44, 87, 60, 0.25), 0 1.5px 8px 0 rgba(0,0,0,0.10);
+  transform: translateY(-8px) scale(1.03);
+  z-index: 2;
+}
+
+
+
+
+
+
+/*메뉴 css*/
+.navbar i {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+.navbar i:hover {
+  color: #2C573C;
+  transform: scale(1.2);
+}
+
+.dropdown-menu-custom {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 0.5rem 1rem;
+  min-width: 160px;
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.dropdown-hover:hover .dropdown-menu-custom {
+  display: block;
+  opacity: 1;
+}
+.dropdown-menu-custom li a {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: #2C573C;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+.dropdown-menu-custom li a:hover {
+  color: #fff;
+  background-color: #2C573C;
+  border-radius: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.meal-table {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+.meal-table th,
+.meal-table td {
+  font-size: 1.1rem;
+}
+.meal-table thead th {
+  background-color: #2C573C;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.meal-table tbody th {
+  background-color: #E9F5EC;
+  font-weight: bold;
+}
+.meal-table tbody tr:nth-child(even) td {
+  background-color: #F7FBF9;
+}
+.meal-table tbody tr:hover {
+  background-color: #e2f0e7;
+  transition: background-color 0.3s;
+}
+
+.navbar-brand img.logo {
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover img.logo {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+h2, p.lead {
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-recipe {
+  background-color: #2C573C;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-recipe:hover {
+  background-color: #3c7a55;
+  transform: translateY(-3px);
+  color: #fff;
+}
+
+

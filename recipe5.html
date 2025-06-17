@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>혼밥연구소</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- 폰트 -->
+  <style>
+    @font-face {
+      font-family: 'KyoboHandwriting2023wsa';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2') format('woff2');
+    }
+
+    body {
+      font-family: 'KyoboHandwriting2023wsa', sans-serif;
+      background-color: #e8f2eb;
+      color: #2c2c2c;
+      margin: 0;
+      padding: 0;
+    }
+
+    .recipe-header {
+      background-image: url('images/kimchi.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .recipe-header h1 {
+      font-size: 3rem;
+    }
+
+    .recipe-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    .recipe-section h3 {
+      color: #2C573C;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .recipe-section ul, .recipe-section ol {
+      padding-left: 20px;
+    }
+
+    .recipe-image {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .btn-back {
+      background-color: #2C573C;
+      color: white;
+    }
+
+    .btn-back:hover {
+      background-color: #244932;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 이미지 헤더 -->
+  <div class="recipe-header">
+    <h1>참치 김치찌개</h1>
+  </div>
+
+  <!-- 본문 레시피 -->
+  <div class="recipe-container">
+    <img src="images/recipe5/5.jpg" alt="참치 김치찌개 이미지" class="recipe-image">
+
+    <div class="recipe-section">
+      <h3>🥣 재료</h3>
+      <ul>
+        <li>김치 1컵</li>
+        <li>참치캔 1개 (기름 제거)</li>
+        <li>양파 1/4개</li>
+        <li>대파 약간</li>
+        <li>물 2컵</li>
+        <li>고춧가루 1스푼</li>
+        <li>다진 마늘 1작은술</li>
+        <li>참기름 1스푼</li>
+        <li>간장 1스푼 (선택)</li>
+      </ul>
+    </div>
+
+    <div class="recipe-section">
+      <h3>🧑‍🍳 만드는 법</h3>
+      <ol>
+        <li>냄비에 참기름을 두르고 김치를 먼저 볶아줍니다.</li>
+        <li>양파와 다진 마늘을 넣고 1~2분 정도 더 볶습니다.</li>
+        <li>참치를 넣고 섞은 후, 물을 붓고 끓입니다.</li>
+        <li>물이 끓으면 고춧가루, 간장(선택)을 넣고 10분 정도 끓입니다.</li>
+        <li>마지막에 대파를 넣고 약불로 2~3분 더 끓입니다.</li>
+      </ol>
+    </div>
+
+    <div class="recipe-section">
+      <h3>💡 꿀팁</h3>
+      <p>참치는 기름을 제거해 넣으면 국물이 더 깔끔하고 느끼하지 않아요.<br>
+         일반 김치를 조금 오래 볶으면 묵은지 김치 맛이 납니다!</p>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="recipes.html" class="btn btn-back px-4 py-2">← 레시피 목록으로 돌아가기</a>
+    </div>
+  </div>
+
+  <!-- TOP 버튼 -->
+  <a href="#" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow" style="width: 50px; height: 50px; z-index: 999;">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </a>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

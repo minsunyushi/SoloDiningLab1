@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>혼밥연구소</title>
+
+  <!--웹페이지 타이틀 로고-->
+  <link rel="icon" href="images/logo.png" type="image/png">
+
+  <!--Bootstrap 아이콘-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!--css 연결-->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /*폰트 적용*/
+    @font-face {
+      font-family: 'KyoboHandwriting2023wsa';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404-2@1.0/KyoboHandwriting2023wsa.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /*배경*/
+    body {
+      font-family: 'KyoboHandwriting2023wsa', sans-serif;
+      background-image: url('images/background2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /*식단표*/
+    .meal-table th, .meal-table td {
+      vertical-align: middle;
+      text-align: center;
+      border: 1px solid #dee2e6;
+      padding: 1rem;
+    }
+
+    .meal-table thead th {
+      background-color: #2C573C;
+      color: white;
+    }
+
+    /*레시피 보러가기 버튼*/
+    .btn-recipe {
+      background-color: #2C573C;
+      color: white;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-recipe:hover {
+      background-color: #3e7a58;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 네비게이션 바 -->
+<nav class="navbar navbar-expand-lg bg-light border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- 왼쪽 공간 확보 (로고 가운데 정렬용) -->
+    <div style="width: 300px;"></div>
+
+    <!-- 가운데 로고 -->
+    <a class="navbar-brand d-flex flex-column align-items-center" href="index.html">
+      <img src="images/logo.png" alt="로고" class="mb-1" style="height: 60px;">
+      <span class="fw-bold text-black" style="font-size: 1.5rem;">혼밥연구소</span>
+    </a>
+
+    <!-- 오른쪽 문구 -->
+    <div style="width: 300px;" class="d-flex justify-content-end">
+      <span class="px-3 py-1 rounded-pill bg-light border border-success text-success small shadow-sm">
+        혼밥연구소와 함께 해주셔서 감사합니다.
+      </span>
+    </div>
+
+  </div>
+</nav>
+
+
+
+<style>
+    .custom-nav-link {
+        position: relative;
+        font-size: 1.15rem;
+        text-decoration: none !important;
+        transition: color 0.2s;
+        color: #fff;
+        padding: 0.5rem 2.5rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+    .custom-nav-link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        width: 50%;
+        height: 2.5px;
+        background: #fff;
+        border-radius: 2px;
+        transform: scaleX(0);
+        transition: transform 0.25s;
+    }
+    .custom-nav-link:hover::after,
+    .custom-nav-link:focus::after {
+        transform: scaleX(1);
+    }
+</style>
+<div style="background-color: #2C573C; width: 100%;">
+    <div class="container px-0">
+        <ul class="nav justify-content-center mb-4 py-3" style="gap: 3rem;">
+            <li class="nav-item d-flex align-items-center">
+                <img src="images/spoon.png" alt="숟가락" style="height: 32px; margin-right: 2rem;">
+            </li>
+            <li class="nav-item"><a class="custom-nav-link" href="recipes.html">레시피</a></li>
+            <li class="nav-item"><a class="custom-nav-link" href="menu.html">주간 식단</a></li>
+            <li class="nav-item"><a class="custom-nav-link" href="kitchen.html">주방 노하우</a></li>
+            <li class="nav-item"><a class="custom-nav-link" href="share.html">한 끼 공유</a></li>
+            <li class="nav-item d-flex align-items-center">
+                <img src="images/chopstick.png" alt="젓가락" style="height: 32px; margin-left: 2rem;">
+            </li>
+        </ul>
+    </div>
+</div>
+
+  <!--주간 식단 섹션-->
+  <section class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4" style="font-size: 2.5rem; color: #fff; text-shadow: 2px 2px 8px rgba(44,87,60,0.7);">
+        🍽️ 이번 주 혼밥 식단표
+      </h2>
+      <p class="mb-5 lead" style="color: #fff; text-shadow: 1px 1px 6px rgba(44,87,60,0.5);">
+        매일매일 추천 레시피로 구성한 혼밥 일주일 플랜입니다!
+      </p>
+
+      <!--식단표 테이블-->
+      <div class="table-responsive">
+        <table class="table meal-table">
+          <thead>
+            <tr>
+              <th>6.15 ~ 6.21</th>
+              <th>아침</th>
+              <th>점심</th>
+              <th>저녁</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>일요일</th><td>얼큰떡만둣국</td><td>계란치즈리조또</td><td>김치계란덮밥</td></tr>
+            <tr><th>월요일</th><td>누룽지</td><td>만두피자</td><td>우유카레계란밥</td></tr>
+            <tr><th>화요일</th><td>시리얼</td><td>오코노미야끼</td><td>오므라이스</td></tr>
+            <tr><th>수요일</th><td>사과 한 알</td><td>스팸마요덮밥</td><td>참치 김치찌개 + 밥</td></tr>
+            <tr><th>목요일</th><td>누룽지</td><td>순두부그라탕</td><td>간장스팸덮밥</td></tr>
+            <tr><th>금요일</th><td>시리얼</td><td>김치볶음밥</td><td>연두부계란밥</td></tr>
+            <tr><th>토요일</th><td>간장계란밥</td><td>만두그라탕</td><td>계란국 + 밥 + 김치</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!--레시피 보러가기 버튼-->
+  <div class="mt-4 text-center">
+    <a href="recipes.html" class="btn btn-recipe px-4 py-2 fs-5 fw-bold">
+      🍳 레시피 보러가기
+    </a>
+  </div>
+
+  <!--Footer-->
+  <footer class="bg-light text-muted py-4 border-top mt-5">
+    <div class="container text-center small">
+      2025 혼밥연구소 – 매주 토요일 저녁 8시에 업로드 됩니다.
+    </div>
+  </footer>
+
+  <!--TOP 버튼-->
+  <a href="#" class="btn btn-success position-fixed bottom-0 end-0 m-4 rounded-circle shadow" style="width: 50px; height: 50px; z-index: 999;">
+    <i class="bi bi-arrow-up-short fs-3"></i>
+  </a>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
